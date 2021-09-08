@@ -1,0 +1,339 @@
+:root{
+    --primary-color: #c72727;
+    --secondary-color: #f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --max-widhth:1100px;
+}
+.category{
+    --sport-color:#f99500;
+    --ent-color:#a66bbe;
+    --tech-color:#009cff;
+}
+*{ box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+
+body{
+    font-family: 'lato', sans-serif;
+    line-height: 1.5;
+    background: var(--light-color);
+
+}
+.media a{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'staatliches', cursive;
+}
+
+/* container utilities */
+a{
+    color: #333;
+    text-decoration: none;
+}
+.container , .container-1{
+    max-width: var(--max-width);
+    padding: 2rem;
+    margin: auto;
+}
+.category{
+    display: inline-block;
+    color: white;
+    font-size: .55rem;
+    text-transform: uppercase;
+    padding: .4rem .6rem;
+    border-radius: 15px;
+    margin-bottom: .5rem;
+}
+ .category-sport{
+    background: var(--sport-color);
+    z-index: 1;
+}
+.category-entairment{
+    background: var(--ent-color);
+    color: white;
+}
+ .category-tech{
+    background: var(--tech-color);
+}
+.btn{
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: white;
+    padding: .5rem .6rem;
+}
+
+.btn-light{
+    background: var(--light-color);
+}
+.btn-primary{
+    background: var(--primary-color);
+}
+.btn-primary:hover{
+    opacity: .8;
+}
+.btn-secodary{
+    background: var(--secondary-color);
+}
+.btn-secodary:hover{
+    opacity: .8;
+}
+.btn-block{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+
+.card{
+    background: #fff;
+    padding: 1rem;
+
+}
+.bg-dark{
+    background: var(--dark-color);
+    color: white;
+}
+.bg-primary{
+    background: var(--primary-color);
+    color: white;
+}
+.bg-seconday{
+    background: var(--secondary-color);
+    color: white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-seconday a,
+.bg-seconday h1,
+.bg-seconday h2,
+.bg-seconday h3{
+    color: white;
+}
+
+.py-2{
+    padding: 2rem 0;
+}
+
+.list li{
+    padding: .5rem 0rem;
+    border-bottom: #fff dotted 1px;
+    width: 90%;
+}
+.list li a:hover{
+   color: var(--primary-color) !important;
+}
+.l-heading{
+    font-size: 3rem;
+}
+.meta{
+    padding: 10px;
+    background: #ccc;
+}
+
+.page-container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    width: 700px;
+    padding:  20px;
+    grid-gap: 1rem;
+}
+.page-container > *:first-child {
+grid-row: 1 /span 3;
+}
+.categories-list li{
+    padding: .5rem;
+    border-bottom: dashed gray .5px;
+}
+
+/* navbar */
+#mainnav{
+    background: white;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+.container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+#mainnav .logo{
+width: 180px;
+}
+#mainnav ul{
+    justify-self: right;
+    display: flex;
+}
+#mainnav ul li a{
+    padding: .75rem;
+    font-weight: bold; 
+}
+#mainnav ul li a.current{
+    background: var(--primary-color);
+    color: white;
+}
+#mainnav ul li a:hover{
+    background: var(--light-color);
+    color: black;
+}
+#mainnav .media{
+    justify-self: center;
+}
+#mainnav .media i{
+    color: #777;
+    margin-right: .5rem;
+}
+
+                                       /* showcase */
+#showcase{
+    color: white;
+    background: black;
+    padding: 2rem;
+    position: relative;
+}
+#showcase::before{
+    content: '';
+    background: url('./featured.jpg') no-repeat center center/cover;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     opacity: .4;
+}
+ #showcase .showcase-container-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    }
+    #showcase .showcase-container-1{
+        z-index: 1;
+        opacity: 1;
+    }
+    .showcase p{
+        margin-bottom: 1rem;
+    }
+    
+
+/* ARTICLE SHOWCASE */
+.container-1{
+    align-items: center;
+    margin: auto;
+}
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    max-width: var(--max-widhth);
+    align-items: center;
+    justify-content: center;
+
+}
+ .article-container > *:first-child ,.article-container > *:last-child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1/span 2;
+}
+.article-container > *:last-child{
+    grid-column: 2/span 2;
+}
+
+/* .article-container> *:nth-child(2){
+    background: var(--dark-color) ;
+    color: white;   
+}
+.article-container> *:nth-child(2) a{
+    color: white;
+}
+.article-container> *:nth-child(6){
+    background: var(--primary-color) ;
+    color: white;   
+} */
+
+/* example for how the shit has been done */
+/* .bg-dark{
+    background: var(--dark-color);
+    color: white;
+}
+.bg-primary{
+    background: var(--primary-color);
+    color: white;
+}
+.bg-seconday{
+    background: var(--secondary-color);
+    color: white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-seconday a,
+.bg-seconday h1,
+.bg-seconday h2,
+.bg-seconday h3{
+    color: white;
+} */
+
+
+                        /*footer  */
+                        /* footer  */
+#main-footer{
+    background: var(--dark-color);
+    color: #fff;
+
+}
+
+#main-footer img{
+    width: 150px;
+}
+#main-footer a{
+    color: #fff;
+}
+#main-footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.3rem;
+}
+#main-footer .bottom{
+    background: #444;
+    grid-column: 1/span 4;
+    line-height: 3rem;
+    text-align: center;
+    font-size: .8rem;
+}
+.footer-container input[type='email'] {
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+.footer-container input[type='submit'] {
+    width: 90%;
+}
